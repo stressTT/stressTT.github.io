@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+}
+body {
+  font-family: "Tenor Sans", sans-serif;
+}
+.numbers{
+  font-family: "Arsenal", sans-serif;
+}
+:root{
+  --main-1: 251, 163, 17;
+  --main-2: 63, 35, 93;
+  --white: 255, 255, 255;
+  --pseudo-white: 255, 255, 254;
+  --black: 18, 18, 18;
+}
+
+
+.iconPrice {
+    background: white;
+    color: rgba(var(--main-1));
+    padding: 14px 16.75px;
+    border-radius: 100%;
+    margin-left: 20px;
+    font-size: 12px;
+    transition: 0.4s all;
+   
+  }
+  .btnPrice {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.4s all;
+    padding: 15px 20px 15px 30px;
+    background-color: rgba(var(--main-1));
+    border-radius: 37px;
+    border: 2px solid rgba(var(--main-1));
+    letter-spacing: 0.6px;
+    font-size: 18px;
+  }
+  .btnPrice:hover {
+    color: rgba(var(--main-1));
+  }
+  .btnPrice:hover .iconPrice {
+    background: rgba(var(--main-1));
+    color: #fff;
+    transform: rotate(360deg);
+  }
+  .btnPrice::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    border-radius: 37px;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 0px #fff;
+    display: block;
+    -webkit-transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+  }
+  /* if you want it to show from the right use -300px instead */
+  .btnPrice:hover::before {
+    box-shadow: inset 300px 0px 0px #fff;
+    border-radius: 37px;
+  }
+
+
+/* width */
+::-webkit-scrollbar {
+    
+    width: 13px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0); 
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555; 
+    border: 3px solid #fff;
+    border-radius: 10px;
+   
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+  }
+
+
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1232px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1232px;
+    }
+}
+  
