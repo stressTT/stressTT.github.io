@@ -1,5 +1,10 @@
 <template>
   <div class="w-full relative z-0">
+    <div v-if="isModalOpen" ref="modal-bg" class="modal-bg">
+      <div class="modal-1" ref="modal1">click outside to close modal</div>
+      <button @click="closeModal">x</button>
+    </div>
+    <!-- v-if="isModalOpen" @click="isModalOpen = false" -->
     <div>
       <div
         id="carouselExampleIndicators"
@@ -39,8 +44,7 @@
               <div class="flex-col justify-end">
                 <p>Доставим в самые кратчайшие сроки</p>
                 <p>Автомобильные перевозки</p>
-
-                <button class="btnPrice">
+                <button @click="isModalOpen = true" class="btnPrice">
                   Расчет Стоимости
                   <i class="fa-solid fa-caret-right iconPrice"></i>
                 </button>
@@ -115,59 +119,33 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <!-- <div
-          id="carouselExampleIndicators1"
-          class="carousel slide w-19"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              v-for="(indi, index) of allPhones" :key="indi.id"
-              type="button"
-              data-bs-target="#carouselExampleIndicators1"
-              :data-bs-slide-to="index"
-              :class="{ active: index === 0 }"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-          </div>
-          <div class="carousel-inner h-full bg-white rounded-lg p-4">
-            <h2 class="text-2xl font-black mb-4 text-center">Товар дня</h2>
-            <div
-              v-for="(product, index) of allPhones"
-              :key="product.id"
-              class="carousel-item act-set min-h-full "
-              :class="{ active: index === 0 }"
-            >
-              <img class="my-2 mb-4" :src="product.images[0].first" alt="" />
-              <h3 class="font-medium">{{ product.name }}</h3>
-              <p class="text-2xl font-medium">{{ product.price }} тг.</p>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators1"
-            data-bs-slide="prev"
-          >
-            <i class="fas fa-chevron-left text-black text-xs"></i>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators1"
-            data-bs-slide="next"
-          >
-            <i class="fas fa-chevron-right text-black text-xs"></i>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div> -->
     </div>
   </div>
 </template>
 
 <style lang="less" scoped>
+.modal-bg {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(var(--black), 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modal-1 {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 1);
+    padding: 50px 100px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.1);
+  }
+}
 .carousel-indicators {
   background: rgba(0, 0, 0, 0.5);
   width: fit-content;
@@ -278,5 +256,35 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default {};
+// import { ref } from "vue";
+// import { onClickOutside } from "@vueuse/core";
+// import Modal1 from "./Modal1Comp.vue";
+// const isModalOpen = ref(false);
+// const modal1 = ref(null);
+
+// onClickOutside(modal1, () => (isModalOpen.value = false));
+
+export default {
+  // components: { Modal1 },
+
+  data() {
+    return {
+      isModalOpen: false,
+      // modal1,
+    };
+  },
+  methods: {
+    closeModal() {
+      this.isModalOpen = false;
+    },
+  },
+  mounted() {
+    let vm = this;
+    document.addEventListener("click", function (item) {
+      if (item.target === vm.$refs["modal-bg"]) {
+        vm.closeModal();
+      }
+    });
+  },
+};
 </script>

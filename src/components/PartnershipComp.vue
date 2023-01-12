@@ -50,6 +50,8 @@
   padding-top: 7%;
   width: 100%;
   background: rgba(var(--pseudo-white));
+  position: relative;
+  z-index: -1;
   background-image: linear-gradient(
     to top,
     rgba(54, 32, 77, 0.03) 0%,
@@ -84,6 +86,7 @@
         padding: 0.76%;
         background: #fff;
         border-right: 1px solid rgba(var(--black), 0.05);
+        cursor: pointer;
         .imageFit {
           color: rgba(var(--black));
           width: 100%;

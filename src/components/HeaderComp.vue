@@ -4,7 +4,7 @@
       <i class="fa-solid fa-image mr-5"></i>
       <div>
         <p>BekLogistics</p>
-        <span class="text-lg">Транспортно-логистическая компания a</span>
+        <span class="text-lg">Транспортно-логистическая компания</span>
       </div>
     </div>
     <div class="HeadRight flex items-center">
@@ -46,7 +46,7 @@
 <style lang="less" scoped>
 .Header {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   background: #fff;
   padding: 25px 120px 25px 30px;
   .HeadLeft {

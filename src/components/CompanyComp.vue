@@ -36,6 +36,7 @@
   background: rgba(var(--white));
   padding: 7%;
   position: relative;
+  z-index: -1;
   .binder {
     position: relative;
     height: 100%;
@@ -64,7 +65,7 @@
       height: 70px;
       background: rgba(var(--main-1));
       position: absolute;
-      z-index: 1;
+      z-index: 0;
       top: 25%;
       right: 0;
       transform: translate(50%, -50%);

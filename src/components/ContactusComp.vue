@@ -36,6 +36,8 @@
   width: 70%;
   padding: 5%;
   background: #fff;
+  position: relative;
+  z-index: -1;
   span {
     font-size: 18px;
   }

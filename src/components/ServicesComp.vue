@@ -48,6 +48,8 @@
 .services {
   padding-top: 7%;
   padding-bottom: 2%;
+  position: relative;
+  z-index: -1;
 
   .nav {
     padding: 0 7% 3.8%;
