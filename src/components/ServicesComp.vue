@@ -49,7 +49,7 @@
   padding-top: 7%;
   padding-bottom: 2%;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 
   .nav {
     padding: 0 7% 3.8%;

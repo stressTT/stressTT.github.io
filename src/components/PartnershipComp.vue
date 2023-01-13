@@ -51,7 +51,7 @@
   width: 100%;
   background: rgba(var(--pseudo-white));
   position: relative;
-  z-index: -1;
+  z-index: 0;
   background-image: linear-gradient(
     to top,
     rgba(54, 32, 77, 0.03) 0%,

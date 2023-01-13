@@ -1,10 +1,72 @@
 <template>
-  <div class="w-full relative z-0">
+  <div class="w-full relative main">
     <div v-if="isModalOpen" ref="modal-bg" class="modal-bg">
-      <div class="modal-1" ref="modal1">click outside to close modal</div>
-      <button @click="closeModal">x</button>
+      <div class="modal-1" ref="modal1">
+        <button class="close-x" @click="closeModal">x</button>
+        <div class="content">
+          <form action="">
+            <p class="mb-2.5">Расчет стоимости</p>
+            <span
+              >Заполните форму, наш менеджер свяжется с Вами в ближайшее
+              время.</span
+            >
+            <input
+              class="modal-price mt-5"
+              type="text"
+              placeholder="Ваше имя"
+            />
+            <input
+              type="number"
+              class="modal-price numbers"
+              placeholder="Телефон"
+            />
+            <label for="sm-1" class="mb-4"><span>Вид услуги:</span></label>
+            <br />
+            <select name="services " id="sm-1">
+              <option value="auto">Автомобильные перевозки</option>
+              <option value="air">Авиа перевозки</option>
+              <option value="train">Железнодорожные перевозки</option>
+            </select>
+            <div class="m-details">
+              <input
+                type="text"
+                class="modal-price"
+                placeholder="Общий вес, кг"
+              />
+              <input
+                type="text"
+                class="modal-price"
+                placeholder="Общий объем, м3"
+              />
+              <input type="text" class="modal-price" placeholder="Откуда" />
+              <input type="text" class="modal-price" placeholder="Куда" />
+            </div>
+            <textarea
+              name=""
+              class="numbers modal-price"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Подробное описание"
+            ></textarea>
+            <div class="flex items-center mb-4">
+              <input class="checkbox mr-2" type="checkbox" />
+              <span
+                >Ознакомлен(на) с
+                <a class="user-agree" href=""
+                  >пользовательским соглашением</a
+                ></span
+              >
+            </div>
+            <button class="btnPrice mb-0 mt-0">
+              Отправить
+              <i class="fa-solid fa-caret-right iconPrice"></i>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-    <!-- v-if="isModalOpen" @click="isModalOpen = false" -->
+
     <div>
       <div
         id="carouselExampleIndicators"
@@ -66,7 +128,7 @@
                 <p>Доставим в самые кратчайшие сроки</p>
                 <p>Авиа перевозки</p>
 
-                <button class="btnPrice">
+                <button @click="isModalOpen = true" class="btnPrice">
                   Расчет Стоимости
                   <i class="fa-solid fa-caret-right iconPrice"></i>
                 </button>
@@ -88,7 +150,7 @@
                 <p>Доставим в самые кратчайшие сроки</p>
                 <p>Железнодорожные перевозки</p>
 
-                <button class="btnPrice">
+                <button @click="isModalOpen = true" class="btnPrice">
                   Расчет Стоимости
                   <i class="fa-solid fa-caret-right iconPrice"></i>
                 </button>
@@ -131,6 +193,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: auto;
 
   background: rgba(var(--black), 0.5);
 
@@ -141,11 +204,73 @@
     position: relative;
     z-index: 1;
     background: rgba(255, 255, 255, 1);
-    padding: 50px 100px;
-    border-radius: 5px;
-    box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    border-radius: 2px;
+    width: 650px;
+    .close-x {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      height: 40px;
+      width: 40px;
+      font-size: 22px;
+    }
+    .content {
+      width: 100%;
+      form {
+        display: block;
+        width: 100%;
+        p {
+          font-size: 31px;
+          line-height: normal;
+        }
+        span {
+          font-size: 18px;
+          color: rgba(var(--black), 0.7);
+        }
+        input,
+        select {
+          width: 100%;
+        }
+        .checkbox {
+          width: fit-content;
+        }
+        textarea {
+          width: 100%;
+          height: 150px;
+        }
+        .modal-price,
+        select {
+          padding: 8px 20px;
+          border: 1px solid rgba(var(--black), 0.1);
+          border-radius: 2px;
+          min-height: 60px;
+          font-size: 17px;
+          margin-bottom: 15px;
+        }
+        .user-agree {
+          color: #7badff !important;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        .m-details {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          input {
+            width: 48.5%;
+          }
+        }
+      }
+    }
   }
 }
+// .main {
+//   z-index: {{number}};
+// }
 .carousel-indicators {
   background: rgba(0, 0, 0, 0.5);
   width: fit-content;
@@ -270,6 +395,7 @@ export default {
   data() {
     return {
       isModalOpen: false,
+
       // modal1,
     };
   },

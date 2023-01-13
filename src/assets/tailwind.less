@@ -11,6 +11,15 @@ body {
 .numbers{
   font-family: "Arsenal", sans-serif;
 }
+ 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 :root{
   --main-1: 251, 163, 17;
   --main-2: 63, 35, 93;
@@ -99,15 +108,5 @@ body {
 
 
 
-@media (min-width: 1536px) {
-    .container {
-        max-width: 1232px;
-    }
-}
 
-@media (min-width: 1280px) {
-    .container {
-        max-width: 1232px;
-    }
-}
   

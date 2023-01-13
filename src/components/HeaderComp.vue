@@ -46,7 +46,7 @@
 <style lang="less" scoped>
 .Header {
   position: relative;
-  z-index: 0;
+  z-index: 1;
   background: #fff;
   padding: 25px 120px 25px 30px;
   .HeadLeft {
@@ -57,7 +57,7 @@
       font-size: 33px;
     }
     span {
-      font-size: 23px;
+      font-size: 18px;
       color: #121212;
     }
   }
@@ -66,90 +66,154 @@
       font-size: 23px;
       color: #121212;
     }
-  }
+    .ddbutton {
+      z-index: 2;
+      &.active .modal-header {
+        height: 300px;
+        padding: 30px 55px 20px 55px;
+      }
+      &.active button i {
+        transform: rotate(180deg) translateY(-25%);
+      }
+      button {
+        padding: 13px 20.625px;
+        border: 1px solid #121212;
+        opacity: 0.4;
+        border-radius: 3px;
+        i {
+          transition: 0.4s all;
+          display: flex;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .modal-header {
+        width: 460px;
+        background: #fff;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        position: absolute;
+        padding: 0 55px;
+        margin-top: 10px;
+        transition: 0.4s all;
+        display: block;
+        height: 0;
+        overflow: hidden;
 
-  button {
-    padding: 13px 20.625px;
-    border: 1px solid #121212;
-    opacity: 0.4;
-    border-radius: 3px;
-    i {
-      transition: 0.4s all;
-      display: flex;
+        font-size: 18px;
+        color: #121212;
+        .ddHeader-2 {
+          margin: 20px 0;
+          span {
+            font-size: 23px;
+            font-weight: 700;
+          }
+          .fa-telegram {
+            color: #229ed9;
+            font-size: 40px;
+            margin: 0 10px 0 20px;
+          }
+          .fa-whatsapp {
+            color: #25d366;
+            font-size: 40px;
+          }
+        }
+        .ddHeader-3 {
+          span {
+            font-size: 18px;
+          }
+        }
+        .ddHeader-4 {
+          margin: 20px 0;
+          span {
+            font-size: 18px;
+          }
+        }
+        .ddHeader-5 {
+          display: flex;
+
+          img {
+            width: 40px;
+            height: 40px;
+            margin-left: 8px;
+          }
+          img:nth-child(1) {
+            margin-left: 0;
+          }
+        }
+      }
     }
-    &:hover {
-      opacity: 1;
+  }
+}
+
+@media (max-width: 479px) {
+  p {
+    color: #d34825;
+  }
+  .Header {
+    .HeadLeft {
+      i {
+        font-size: 65px;
+      }
+      p {
+        font-size: 28px;
+      }
+      span {
+        font-size: 18px;
+        color: #121212;
+      }
     }
   }
 }
-.ddbutton {
-  z-index: 2;
-}
-.modal-header {
-  width: 460px;
-  background: #fff;
-  top: 100%;
-  right: 0;
-  z-index: 2;
-  position: absolute;
-  padding: 0 55px;
-  margin-top: 10px;
-  transition: 0.4s all;
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.ddbutton.active .modal-header {
-  height: 300px;
-  padding: 30px 55px 20px 55px;
-}
-.ddbutton.active button i {
-  transform: rotate(180deg) translateY(-25%);
-}
 
-.fa-telegram {
-  color: #229ed9;
-  font-size: 40px;
-  margin: 0 20px 0 10px;
-}
-.fa-whatsapp {
-  color: #25d366;
-  font-size: 40px;
-}
-
-span {
-  font-size: 18px;
-  color: #121212;
-}
-a {
-  color: #121212;
-}
-.ddHeader-2 {
-  margin: 20px 0;
-  span {
-    font-size: 24px;
-    font-weight: 600;
+@media (min-width: 480px) and (max-width: 767px) {
+  p {
+    color: #2536d3;
+  }
+  .Header {
+    .HeadLeft {
+      i {
+        font-size: 65px;
+      }
+      p {
+        font-size: 28px;
+      }
+      span {
+        font-size: 18px;
+        color: #121212;
+      }
+    }
   }
 }
-.ddHeader-4 {
-  margin: 20px 0;
-}
-.ddHeader-5 {
-  display: flex;
 
-  img {
-    width: 40px;
-    height: 40px;
-    margin-left: 8px;
+@media (min-width: 768px) and (max-width: 1023px) {
+  p {
+    color: #25d366;
   }
-  img:nth-child(1) {
-    margin-left: 0;
+  .Header {
+    .HeadLeft {
+      i {
+        font-size: 65px;
+      }
+      p {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1232px;
   }
 }
 </style>
 <script>
 export default {
   name: "HeadersComp",
+
   data() {
     return {
       isActive: false,

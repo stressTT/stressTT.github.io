@@ -37,7 +37,7 @@
   padding: 5%;
   background: #fff;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   span {
     font-size: 18px;
   }
@@ -76,7 +76,4 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
 </style>
