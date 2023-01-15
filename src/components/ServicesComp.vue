@@ -28,7 +28,7 @@
         <div class="num">
           <span class="numbers" href="">+7 700 000 0000</span>
           <button class="btnPrice">
-            Отправить
+            Расчет стоимости
             <i class="fa-solid fa-caret-right iconPrice"></i>
           </button>
         </div>
@@ -59,7 +59,7 @@
     display: block;
 
     span {
-      font-size: clamp(28px, 33.5vw, 80px);
+      font-size: clamp(28px, 3.3vw, 80px);
       line-height: normal;
     }
     h1 {
@@ -180,140 +180,152 @@
   }
 }
 @media (max-width: 480px) {
+  .services {
+    padding-top: 0; // e
+    padding-bottom: 0; //e
+
+    .nav {
+      padding: 25px; //e
+      text-align: start; //e
+      h1 {
+        font-size: 19px; //e
+        line-height: 25px; //e
+        margin: 10px 0 0; //e
+      }
+    }
+    .main {
+      padding: 0; //e
+
+      .service {
+        cursor: pointer;
+        padding: 30px 25px; //e
+      }
+      .consultant {
+        padding: 40px 25px; //e
+        display: flex; //e
+        flex-wrap: wrap; //e
+
+        .name {
+          width: 100%; //e
+          display: block;
+          text-align: center;
+
+          img {
+            margin-right: 30px; //e
+            height: 120px;
+            width: 120px;
+            margin: 0 auto 20px;
+          }
+        }
+        .num {
+          width: 100%; //e
+          flex-direction: column;
+          margin-top: 10px;
+          .btnPrice {
+            margin-top: 20px;
+          }
+        }
+      }
+      .foot {
+        padding: 25px; //e
+        text-align: start; //e
+      }
+    }
+  }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+  .services {
+    padding-top: 0; // e
+    padding-bottom: 0; //e
+
+    .nav {
+      text-align: start; //e
+      padding: 30px 25px; //e
+      h1 {
+        font-size: 18px; //e
+        line-height: 25px; //e
+        margin: 10px 0 0; //e
+      }
+    }
+    .main {
+      padding: 0; //e
+
+      .service {
+        cursor: pointer;
+        padding: 35px 30px; //e
+      }
+      .consultant {
+        padding: 40px 25px; //e
+        display: flex; //e
+        flex-wrap: wrap; //e
+
+        .name {
+          width: 100%; //e
+          display: block;
+          text-align: center;
+
+          img {
+            margin-right: 30px; //e
+            height: 120px;
+            width: 120px;
+            margin: 0 auto 20px;
+          }
+        }
+        .num {
+          width: 100%; //e
+          flex-direction: column;
+          margin-top: 10px;
+          .btnPrice {
+            margin-top: 20px;
+          }
+        }
+      }
+      .foot {
+        padding: 30px 25px; //e
+        text-align: start; //e
+      }
+    }
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .services {
     padding-top: 0; // e
     padding-bottom: 0; //e
-    position: relative;
-    z-index: 0;
 
     .nav {
-      padding: 40px 30px;
-      color: #fff;
-      text-align: start;
-      width: 100%;
-      display: block;
-
-      span {
-        font-size: 3.5vw;
-        line-height: normal;
-      }
+      padding: 40px 30px; //e
+      text-align: start; //e
       h1 {
-        opacity: 0.5;
         font-size: 19px; //e
-
-        letter-spacing: 0.3px;
-        font-weight: 400;
         line-height: 25px; //e
-        max-width: 500px;
         margin: 10px 0 0; //e
       }
     }
     .main {
-      width: 100%;
       padding: 0; //e
 
       .service {
         cursor: pointer;
         padding: 40px 30px; //e
-        width: 100%;
-        background: #fff;
-        color: #121212;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        transition: 0.2s all;
-        p {
-          transition: 0.5s all;
-        }
-        span {
-          font-size: 20px;
-          letter-spacing: 0.3px;
-          width: 100%;
-          transition: 0.5s all;
-        }
-        &:hover {
-          p {
-            margin-left: 10px;
-          }
-          span {
-            margin-left: 10px;
-          }
-          background: rgb(241, 241, 241);
-        }
       }
       .consultant {
-        width: 100%;
-        background: rgba(var(--main-1));
-        padding: 45px 50px;
-        display: flex;
-        align-items: center;
-        color: rgba(var(--white));
-        justify-content: space-between;
+        padding: 40px 30px; //e
+        display: flex; //e
+        flex-wrap: wrap; //e
 
         .name {
-          display: flex;
-          align-items: center;
-          width: 50%;
+          width: 100%; //e
           img {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border: 10px solid rgba(var(--white), 0.15);
-            border-radius: 50%;
-            margin-right: 20px;
-          }
-          p {
-            font-size: 23px;
-            letter-spacing: 0.3px;
-          }
-          span {
-            font-size: 19px;
-            letter-spacing: 0.3px;
-            opacity: 0.7;
+            margin-right: 30px; //e
           }
         }
         .num {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          width: 50%;
-          padding-left: 30px;
-          flex-wrap: wrap;
-          span {
-            font-size: 26px;
-            font-weight: 400;
-            cursor: pointer;
-            padding: 15px 0;
-          }
-          .btnPrice {
-            background: rgba(var(--main-2));
-            border: 2px solid rgba(var(--main-2));
-            i {
-              color: rgba(var(--main-2));
-            }
-            &:hover {
-              color: rgba(var(--main-2));
-              i {
-                background: rgba(var(--main-2));
-                color: rgba(var(--white));
-              }
-            }
-          }
+          width: 100%; //e
         }
       }
       .foot {
-        padding: 50px 60px;
-        text-align: center;
-        font-size: 18px;
-        color: rgba(var(--white), 0.5);
-        line-height: 27px;
-        width: 100%;
-        letter-spacing: 0.3px;
-        span {
-          flex-grow: 1;
-        }
+        padding: 40px 30px; //e
+        text-align: start; //e
       }
     }
   }
