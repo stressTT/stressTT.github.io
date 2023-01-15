@@ -1,7 +1,7 @@
 <template>
   <div class="company">
     <div class="binder">
-      <div class="profile absolute w-1/2">
+      <div class="profile">
         <img src="../assets/img/profile1.jpeg" alt="" />
       </div>
       <div class="main">
@@ -36,7 +36,7 @@
   background: rgba(var(--white));
   padding: 7%;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   .binder {
     position: relative;
     height: 100%;
@@ -47,6 +47,8 @@
     top: 0;
     right: 0;
     bottom: 0;
+    width: 50%;
+    position: absolute;
     img {
       width: 100%;
       height: 100%;
@@ -91,6 +93,8 @@
       }
       span {
         font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.3px;
       }
     }
     .submain {
@@ -113,6 +117,196 @@
         letter-spacing: 0.3px;
         opacity: 0.5;
         margin-top: 5px;
+        line-height: normal;
+      }
+    }
+  }
+}
+@media (max-width: 479px) {
+  .company {
+    padding: 0; //e
+    .binder {
+      height: 100%; //e
+      padding-top: 0; //e
+    }
+    .profile {
+      position: relative; //e
+      height: 300px; //e
+      width: 100%; //e
+      img {
+        height: 100%; //e
+        object-fit: cover; //e
+        object-position: 0px 40%; //e
+      }
+    }
+    .main {
+      padding: 60px 25px 35px; //e
+      width: 100%; //e
+      .quote {
+        width: 60px; //e
+        height: 60px; //e
+        border-radius: 50%; //e
+        top: 0; //e
+        left: 0; //e
+        img {
+          width: 20px; //e
+        }
+      }
+
+      .nav {
+        display: block;
+        align-items: center;
+        margin-bottom: 30px; //e
+        i {
+          font-size: 65px; //e
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 28px; //e
+          line-height: normal; //e
+        }
+        span {
+          font-size: 18px; //e
+          letter-spacing: 0;
+        }
+      }
+      .submain {
+        p {
+          font-size: 18px; //e
+          line-height: 27px; //e
+        }
+      }
+      .foot {
+        margin-top: 30px; //e
+        text-align: start;
+        p {
+          font-size: 22px; //e
+        }
+      }
+    }
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .company {
+    padding: 0; //e
+    .binder {
+      height: 100%; //e
+      padding-top: 0; //e
+    }
+    .profile {
+      position: relative; //e
+      height: 460px; //e
+      width: 100%; //e
+      img {
+        height: 100%; //e
+        object-fit: cover; //e
+        object-position: 0px 40%; //e
+      }
+    }
+    .main {
+      padding: 60px 25px 40px; //e
+      width: 100%; //e
+      .quote {
+        width: 60px; //e
+        height: 60px; //e
+        border-radius: 50%; //e
+        top: 0; //e
+        left: 0; //e
+        img {
+          width: 20px; //e
+        }
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px; //e
+        i {
+          font-size: 65px; //e
+        }
+        p {
+          font-size: 28px; //e
+          line-height: normal; //e
+        }
+        span {
+          font-size: 18px; //e
+          letter-spacing: 0;
+        }
+      }
+      .submain {
+        p {
+          font-size: 18px; //e
+          line-height: 27px; //e
+        }
+      }
+      .foot {
+        margin-top: 35px; //e
+        text-align: end;
+        p {
+          font-size: 22px; //e
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .company {
+    padding: 0; //e
+    .binder {
+      height: 100%; //e
+      padding-top: 0; //e
+    }
+    .profile {
+      position: relative; //e
+      height: 600px; //e
+      width: 100%; //e
+      img {
+        height: 100%; //e
+        object-fit: cover; //e
+        object-position: 0px 40%; //e
+      }
+    }
+    .main {
+      padding: 60px 30px 40px; //e
+      width: 100%; //e
+      .quote {
+        width: 60px; //e
+        height: 60px; //e
+        border-radius: 50%; //e
+        top: 0; //e
+        left: 0; //e
+        img {
+          width: 20px; //e
+        }
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        margin-bottom: 45px; //e
+        i {
+          font-size: 65px; //e
+        }
+        p {
+          font-size: 28px; //e
+          line-height: normal; //e
+        }
+        span {
+          font-size: 18px; //e
+        }
+      }
+      .submain {
+        p {
+          font-size: 18px; //e
+          line-height: 27px; //e
+        }
+      }
+      .foot {
+        margin-top: 45px; //e
+        text-align: end;
+        p {
+          font-size: 23px; //e
+        }
       }
     }
   }
