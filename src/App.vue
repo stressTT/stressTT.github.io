@@ -1,17 +1,18 @@
 <template>
   <div>
     <a name="head" href=""></a>
-    <Header />
-
-    <Sliders />
-
-    <Achive />
-    <Services />
-    <Company />
-    <Partnership />
     <BG />
-    <Navbar />
-    <Footer />
+    <Header />
+    <Sliders />
+    <div class="hidden">
+      <Achive />
+      <Services />
+      <Company />
+      <Partnership />
+
+      <Navbar />
+      <Footer />
+    </div>
   </div>
 </template>
 

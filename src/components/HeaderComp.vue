@@ -10,7 +10,7 @@
     <div class="HeadRight flex items-center">
       <span class="font-bold numbers">+7 771 232 3307</span>
       <div
-        class="relative ddbutton ml-5"
+        class="relative ddbutton"
         @click="myFilter()"
         v-bind:class="{ active: isActive }"
       >
@@ -76,10 +76,11 @@
         transform: rotate(180deg) translateY(-25%);
       }
       button {
-        padding: 13px 20.625px;
+        padding: 15px 20.625px;
         border: 1px solid #121212;
         opacity: 0.4;
         border-radius: 3px;
+        margin-left: 20px;
         i {
           transition: 0.4s all;
           display: flex;
@@ -89,7 +90,7 @@
         }
       }
       .modal-header {
-        width: 460px;
+        width: 360px; //460
         background: #fff;
         top: 100%;
         right: 0;
@@ -105,7 +106,7 @@
         font-size: 18px;
         color: #121212;
         .ddHeader-2 {
-          margin: 20px 0;
+          margin: 0 0 20px;
           span {
             font-size: 23px;
             font-weight: 700;
@@ -153,16 +154,61 @@
     color: #d34825;
   }
   .Header {
+    padding: 20px;
+    flex-wrap: wrap;
     .HeadLeft {
+      width: 100%;
+      flex-wrap: wrap;
+      padding-right: 45px;
       i {
-        font-size: 65px;
+        font-size: 60px;
       }
       p {
         font-size: 28px;
       }
+    }
+    .HeadRight {
+      width: 100%;
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+      align-items: center;
+      margin-top: 20px;
       span {
-        font-size: 18px;
+        font-size: 21px;
         color: #121212;
+      }
+      .ddbutton {
+        &.active .modal-header {
+          padding: 25px 25px 1px;
+          height: 250px;
+        }
+        button {
+          padding: 10px 15.625px;
+          border-radius: 50%;
+          margin-right: 20px;
+          margin-left: 0;
+        }
+        .modal-header {
+          padding: 0 25px;
+          left: 0;
+          width: 280px;
+          .ddHeader-2 {
+            span {
+              font-size: 20px;
+            }
+          }
+          .ddHeader-3 {
+            span {
+              font-size: 17px;
+            }
+          }
+          .ddHeader-4 {
+            margin: 15px 0;
+            span {
+              font-size: 17px;
+            }
+          }
+        }
       }
     }
   }
@@ -173,16 +219,60 @@
     color: #2536d3;
   }
   .Header {
+    padding: 20px 25px;
+    flex-wrap: wrap;
     .HeadLeft {
+      width: 100%;
+      padding-right: 50px;
       i {
         font-size: 65px;
       }
       p {
         font-size: 28px;
       }
+    }
+    .HeadRight {
+      width: 100%;
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+      align-items: center;
+      margin-top: 20px;
       span {
-        font-size: 18px;
+        font-size: 21px;
         color: #121212;
+      }
+      .ddbutton {
+        &.active .modal-header {
+          padding: 35px 35px 5px;
+          height: 250px;
+        }
+        button {
+          padding: 10px 15.625px;
+          border-radius: 50%;
+          margin-right: 20px;
+          margin-left: 0;
+        }
+        .modal-header {
+          padding: 0 35px;
+          left: 0;
+
+          .ddHeader-2 {
+            span {
+              font-size: 21px;
+            }
+          }
+          .ddHeader-3 {
+            span {
+              font-size: 17px;
+            }
+          }
+          .ddHeader-4 {
+            margin: 15px 0;
+            span {
+              font-size: 17px;
+            }
+          }
+        }
       }
     }
   }
@@ -193,7 +283,9 @@
     color: #25d366;
   }
   .Header {
+    padding: 25px 90px 25px 25px;
     .HeadLeft {
+      width: 100%;
       i {
         font-size: 65px;
       }
@@ -201,12 +293,44 @@
         font-size: 28px;
       }
     }
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1232px;
+    .HeadRight {
+      width: 100%;
+      justify-content: flex-end;
+      span {
+        font-size: 21px;
+        color: #121212;
+      }
+      .ddbutton {
+        &.active .modal-header {
+          padding: 40px 40px 5px;
+        }
+        button {
+          padding: 10px 15.625px;
+          border-radius: 50%;
+        }
+        .modal-header {
+          padding: 0 40px;
+          margin-top: 35px;
+          z-index: 2;
+          .ddHeader-2 {
+            span {
+              font-size: 21px;
+            }
+          }
+          .ddHeader-3 {
+            span {
+              font-size: 17px;
+            }
+          }
+          .ddHeader-4 {
+            margin: 15px 0;
+            span {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>

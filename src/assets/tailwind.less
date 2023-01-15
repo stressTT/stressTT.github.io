@@ -29,7 +29,7 @@ input[type="number"] {
 }
 
 
-.iconPrice {
+  .iconPrice {
     background: white;
     color: rgba(var(--main-1));
     padding: 14px 16.75px;
@@ -104,6 +104,33 @@ input[type="number"] {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #888; 
+  }
+  @media (max-width: 479px){
+    .btnPrice{
+      padding: 11px 11px 11px 20px;
+      font-size: 17px;
+    }
+    .iconPrice {
+      background: white;
+      color: rgba(var(--main-1));
+      padding: 14px 16.75px;
+      border-radius: 100%;
+      margin-left: 1px;
+      font-size: 12px;
+      transition: 0.4s all;
+     
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767px){
+    .btnPrice{
+      padding: 11px 11px 11px 25px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px){
+    .btnPrice{
+      padding: 11px 11px 11px 25px;
+    }
   }
 
 
