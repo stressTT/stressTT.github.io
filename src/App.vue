@@ -4,8 +4,8 @@
     <BG />
     <Header />
     <Sliders />
+    <Achive />
     <div class="hidden">
-      <Achive />
       <Services />
       <Company />
       <Partnership />

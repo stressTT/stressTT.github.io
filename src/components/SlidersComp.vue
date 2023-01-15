@@ -373,7 +373,7 @@
       position: absolute;
       top: 0%;
       left: 0%;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(var(--main-2), 0.3);
       z-index: 0;
     }
   }
@@ -388,6 +388,7 @@
           form {
             p {
               font-size: 25px; //edited
+              padding-right: 30px;
             }
             span {
               font-size: 17px; //edi
