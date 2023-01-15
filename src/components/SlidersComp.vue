@@ -311,7 +311,7 @@
       background: #fff;
       padding: 10.5px 14px;
       border-radius: 100%;
-      opacity: 0;
+      opacity: 0.7;
       border: 1px solid rgb(114, 111, 111);
     }
 
@@ -381,80 +381,26 @@
 @media (max-width: 479px) {
   .main {
     .modal-bg {
-      position: fixed;
-      z-index: 10;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow-y: auto;
-
-      background: rgba(var(--black), 0.5);
-
-      display: flex;
       .modal-1 {
-        position: relative;
-        z-index: 1;
-        background: rgba(255, 255, 255, 1);
         padding: 30px 25px; //edited
-        border-radius: 2px;
-        width: 100%;
-        display: flex;
         margin: auto 20px; //edited
-        .close-x {
-          position: absolute;
-          right: 10px;
-          top: 10px;
-          height: 40px;
-          width: 40px;
-          font-size: 22px;
-        }
         .content {
-          width: 100%;
           form {
-            display: block;
-            width: 100%;
             p {
               font-size: 25px; //edited
-              line-height: normal;
-              padding-right: 20px;
             }
             span {
               font-size: 17px; //edi
-              color: rgba(var(--black), 0.7);
-            }
-            input,
-            select {
-              width: 100%;
-            }
-            .checkbox {
-              width: fit-content;
             }
             textarea {
-              width: 100%;
               height: 120px; //edited
             }
             .modal-price,
             select {
               padding: 8px 15px; //edited
-              border: 1px solid rgba(var(--black), 0.1);
-              border-radius: 2px;
               min-height: 55px; //ed
-              font-size: 17px;
-              margin-bottom: 10px;
-            }
-            .user-agree {
-              color: #7badff !important;
-              text-decoration: underline;
-              &:hover {
-                text-decoration: none;
-              }
             }
             .m-details {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-
               input {
                 width: 100%; //ed
               }
@@ -483,12 +429,12 @@
       }
       .carousel-control-prev {
         left: 50%;
-        transform: translate(-100%, -250%);
+        transform: translate(-100%, -200%);
       }
 
       .carousel-control-next {
         right: 50%;
-        transform: translate(100%, -250%);
+        transform: translate(100%, -200%);
       }
       .carousel-control-prev,
       .carousel-control-next {
