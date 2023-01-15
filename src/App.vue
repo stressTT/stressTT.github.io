@@ -7,9 +7,8 @@
     <Achive />
     <Services />
     <Company />
+    <Partnership />
     <div class="hidden">
-      <Partnership />
-
       <Navbar />
       <Footer />
     </div>
