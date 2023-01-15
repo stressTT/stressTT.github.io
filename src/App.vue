@@ -5,8 +5,8 @@
     <Header />
     <Sliders />
     <Achive />
+    <Services />
     <div class="hidden">
-      <Services />
       <Company />
       <Partnership />
 
